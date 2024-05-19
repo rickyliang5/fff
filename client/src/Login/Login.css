@@ -1,0 +1,105 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.input{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin:30px 0;
+}
+
+.label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events:none;
+    transition:.5s;
+}
+
+.textField{
+    width:100%;
+    padding: 0 5px;
+    height: 40px;
+    border:none;
+    font-size: 24px;
+    background: none;
+    outline:none;
+}
+
+
+.wrapper{
+    background:linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%);
+    height:100vh;
+    overflow:hidden;
+  }
+
+.login-container input{
+    background: rgb(255, 255, 255);
+}
+
+.input span::before{
+    content:'';
+    position:absolute;
+    top:40px;
+    left:0;
+    width:0%;
+    height:2px;
+    background:rgb(0, 0, 0);
+    transition:.5s;
+}
+.input .textField:focus ~ label,
+.input .textField:valid ~ label{
+    top:-5px;
+    color:#000000;
+}
+
+.input .textField:focus ~ span::before,
+.input .textField:valid ~ span::before{
+    width:100%;
+}
+
+
+
+.btn{
+    width: 100%;
+    height:45px;
+    background:rgb(0, 0, 0);
+    border:1px solid;
+    outline:none;
+    border-radius: 40px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    color:#ffffff;
+    font-weight:600;
+}
+
+.btn[type="submit"]:hover{
+    border-color:rgb(0, 0, 0);
+    transition:.5s;
+}
+
+.header{
+    font-size: 36px;
+    text-align:center;
+    border-bottom: 1px solid silver;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+    background: white;
+    width:500px;
+    height: 500px;
+}
+.error-message{
+    text-align: center;
+    padding:3px;
+}

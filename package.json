@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "cors": "^2.8.5",
+    "react-animate-on-scroll": "^2.1.7"
+  }
+}

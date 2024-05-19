@@ -1,0 +1,48 @@
+/* UserTable.css */
+
+/* Flex layout for the entire page */
+.mgmtHome {
+    display: flex;
+    height: 100vh; /* Adjust the height of the page as needed */
+}
+
+/* Styling for the sidebar */
+.sidebarMgmt {
+    width: 200px; /* Adjust the width of the sidebar as needed */
+    background-color: #000000; /* Adjust background color */
+    padding-left: 50px;
+    padding-right:15px;
+    color: #ffffff; /* Adjust text color */
+}
+
+.sidebarMgmt h2 {
+    font-size: 16px; /* Adjust font size for sidebar headings */
+}
+
+.sidebarMgmt ul li a {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* Set link color to black */
+}
+
+
+/* Styling for the main content area */
+#layoutSidenav_content {
+    flex: 1; /* Allow the content area to grow to fill the remaining space */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Additional styling for the table container */
+#layoutSidenav_content .container-xl {
+    max-width: 90%; /* Allow the table container to expand to fill the available width */
+}
+
+.table {
+    font-size: 14px; /* Reduce font size for the table */
+}
+
+/* Additional styling for the table card */
+#layoutSidenav_content .card {
+    width: 100%; /* Make the card container fill the width of the content area */
+}

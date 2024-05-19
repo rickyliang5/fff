@@ -1,0 +1,417 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Trebuchet MS", cursive; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+  }
+  .gridcontainer{
+    height: 100vh;
+    display:grid;
+  
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "side header"
+    "side main"
+    ;
+  }
+  .grid-container-no-scroll{
+    height: 100vh;
+    display:grid;
+    overflow: hidden;
+  
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "side header"
+    "side main"
+    ;
+  }
+
+  h6{
+    padding: 10px;
+    font-size: clamp(10px, 3vw, 20px);
+    color:white;
+    line-height: .95;
+  }
+  h5{
+    padding: 30px;
+    font-size: clamp(40px, 3vw, 120px);
+    color:white;
+    line-height: .95;
+  
+  }
+  h4{
+    font-size: 45px;
+    text-align: center;
+    font-size: clamp(40px, 3vw, 120px);
+  }
+  .header{
+    font-size: 38px;
+    padding: 65px;
+    background-color: #fff;
+    border-bottom: px solid #e0e4e8;
+    grid-area: header;
+  }
+  .header h3{
+    font-size: 45px;
+    color:black;
+  }
+  .sidebar{
+    background-color: black;
+    grid-area:side;
+  }
+  .main{
+    background-color: #ffffff;
+    padding: 60px;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "c1 c2"
+    "c3 c3"
+    ;
+    gap:100px;
+  }
+  .main-new-account{
+    background-color: #ffffff;
+    padding: 60px;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "c1 c2"
+    "c3 c3"
+    "c4 c4"
+    "c5 c5"
+    "c5 c5"
+    "c5 c5"
+    "c5 c5"
+    "c5 c5"
+    ;
+    gap:100px;
+  }
+  
+  .main-atm{
+    background-color: #ffffff;
+    padding: 60px;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "c1 c2"
+    "c3 c4"
+    ;
+    gap:100px;
+  }
+  .depositbuttonmargin{
+    margin-bottom:20px;
+  }
+  .amountmargin{
+    margin-bottom:5px;
+  }
+  .atminput{
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px;
+    width: 300px;
+    box-sizing: border-box; 
+    background-color: #dddada; 
+  }
+  .btnATM {
+    display: inline-block;
+    width: 200px; 
+    height: 50px; 
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow:0 20px 35px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .card:nth-child(1){
+    grid-area: c1;
+    background-color: #0c0d0f;
+  }
+  .card:nth-child(2){
+    grid-area: c2;
+    background-color: #0c0d0f;
+  
+  }
+  .card:nth-child(3){
+    grid-area: c3;
+  }
+  
+  
+  @media(max-width: 760px){
+    .main{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 200px);
+      grid-template-areas: initial;
+    }
+    .card{
+      grid-area:initial !important;
+    }
+  }
+  
+  .sidebar{
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background: #0c0d0f;
+    padding: 30px 0;
+  }
+  
+  .sidebar h2{
+    color: #FDFEFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  
+  .sidebar ul li{
+    padding: 25px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+  }
+  
+  .sidebar ul li a{
+   color: #a59b9b;
+   display: block;
+  }
+  
+  
+  .sidebar ul li:hover{
+    background:#05081b2f;
+   }
+  
+  .sidebar ul li:hover a{
+    color: #fff;
+   }
+   table{
+    width:100%;
+    border-collapse: collapse;
+    background:#323232;
+  }
+  .sidebar ul li button{
+    background-color: #0c0d0f;
+    color:#a59b9b;
+    outline:none;
+    border:none;
+  }
+  .sidebar ul li button:hover {
+    color: #fff;
+    cursor:pointer;
+  }
+  caption, th{
+    text-align:left;
+  }
+  
+  caption,
+  th,
+  td{
+    padding:1rem;
+  
+  }
+  caption{
+    background: hsl(0,0,0);
+    font-size:1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  th{
+    background: hsl(0, 0%, 100%);
+  }
+  tr:nth-of-type(n){
+    background: hsl(0, 0%, 100%);
+  }
+  
+  @media(max-width: 1200px){
+    th{
+      display:none;
+    }
+    td{
+      display:grid;
+      gap:0.5rem;
+      grid-template-columns: 15ch auto;
+      padding: 0.5rem 1rem;
+    }
+    td:first-child{
+      padding-top:1rem;
+    }
+    td:last-child{
+      padding-bottom:1rem;
+    }
+    td::before{
+      font-weight:700;
+      text-transform:capitalize;
+    }
+    td:nth-of-type(1)::before{
+      content: "Date: ";
+    }
+    td:nth-of-type(2)::before{
+      content: "Description: ";
+    }
+    td:nth-of-type(3)::before{
+      content: "Category: ";
+    }
+    td:nth-of-type(4)::before{
+      content: "Debit|Credit: ";
+    }
+    td:nth-of-type(5)::before{
+      content: "Balance: ";
+    }
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    background-color: #323232;
+  }
+
+  .account-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .account-button {
+    padding: 20px 30px;
+    margin: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .account-button:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 768px) {
+    .account-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  .open-close-account-button{
+    margin:10px;
+    width:40%;
+    border-radius: 10px;
+    height:25%;
+    cursor:pointer;
+  }
+  .account-card{
+    border-radius: 10px;
+  }
+  .account-card:nth-child(1){
+    grid-column-start: c1; 
+    grid-column-end: c2; 
+  }
+ .new-account-input{
+  width:40%;
+ }
+  .form-card{
+    display: flex;
+    justify-content: center;
+    margin:10px;
+   }
+   .form-control{
+    margin-bottom: 10px;
+   }
+   .new-account-input{
+    width: 300px;
+   }
+   .form-card-instructions{
+    display: flex;
+    justify-content: center;
+    margin:10px;
+    text-align: center;
+   }
+
+   .form-card:nth-child(1){
+     grid-column-start: c1; 
+     grid-column-end: c2; 
+   }
+   .form-card-instructions:nth-child(2){
+    grid-column-start: c3; 
+    grid-column-end: c3; 
+   }
+  .create-account-btn{
+    background-color: #0c0d0f;
+    color:#a59b9b;
+    outline:none;
+    border:none;
+    border-radius:10px;
+    width: 420px;
+    height:40px;
+   }
+   .create-account-btn:hover{
+    color: #fff;
+    cursor:pointer;
+   }
+
+
+   .gridcontainer .body{
+    padding: 400px;
+   }
+
+   /* delete button & rounded edges for user's account viewer */
+   .delete-button {
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .delete-button:hover {
+    background-color: #f0f0f0;
+  }
+
+  .account-card table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 1px solid #fff;
+  }
+  
+  
+
+  
